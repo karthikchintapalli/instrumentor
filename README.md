@@ -1,4 +1,16 @@
-# instrumentor
+# Instrumentor
+
+Problem statement:
+
+Technology used:
+
+Target Customer Segment:
+
+Features + UI:
+
+Differentiating factor:
+
+
 
 Demographic segmentation:
  1. Motivated to learn how to play an instrument
