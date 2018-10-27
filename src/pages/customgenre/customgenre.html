@@ -1,0 +1,31 @@
+<ion-header>
+        <ion-navbar>
+            <button menuToggle *ngIf="!selectedItem">
+            <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-title>Custom Song</ion-title>
+        </ion-navbar>
+        </ion-header>
+        
+        <ion-content>
+        <h3 text-center *ngIf="selectedItem">
+            Custom Song
+            <ion-icon [name]="selectedItem.icon"></ion-icon>
+        </h3>
+        <div style="text-align: center">
+            <div style="display: inline-block">
+                    <ion-input style="text-align: center" type="file" placeholder="Upload File"></ion-input>
+            </div>
+            <br/>
+              <button ion-button (click)="itemTapped($event, item)">Upload Song</button>
+        </div>
+        <!-- <ion-list>
+            <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+            <ion-icon name="{{item.icon}}" item-left></ion-icon>
+            {{item.title}}
+            <div class="item-note" item-right>
+                {{item.note}}
+            </div>
+            </button>
+        </ion-list> -->
+        </ion-content>

@@ -11,6 +11,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyProfile } from '../pages/myprofile/myprofile';
 import { LeaderBoard } from '../pages/leaderboard/leaderboard';
+import { GenrePage } from '../pages/genre/genre';
+import { CustomGenrePage } from '../pages/customgenre/customgenre';
+import { SheetMusicPage } from '../pages/sheetmusic/sheetmusic';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,10 @@ import { LeaderBoard } from '../pages/leaderboard/leaderboard';
     ItemDetailsPage,
     ListPage,
     MyProfile,
-    LeaderBoard
+    LeaderBoard,
+    GenrePage,
+    CustomGenrePage,
+    SheetMusicPage
   ],
   imports: [
     BrowserModule,
@@ -32,11 +39,15 @@ import { LeaderBoard } from '../pages/leaderboard/leaderboard';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    LeaderBoard
+    LeaderBoard,
+    GenrePage,
+    CustomGenrePage,
+    SheetMusicPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    YoutubeVideoPlayer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -1,36 +1,35 @@
 import { Component } from '@angular/core';
 
 import { NavController, NavParams } from 'ionic-angular';
-
-import {GenrePage} from '../genre/genre';
+import {CustomGenrePage} from '../customgenre/customgenre';
 
 @Component({
   selector: 'page-item-details',
-  templateUrl: 'item-details.html'
+  templateUrl: 'genre.html'
 })
-export class ItemDetailsPage {
+export class GenrePage {
   selectedItem: any;
-  levels: string[];
+  genres: string[];
   items: Array<{title: string, note: string, icon: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
-    this.levels = ["Beginner", "Medium", "Hard", "Professional"];
+    this.genres = ["Custom Song", "Classical", "Jazz", "Contemporary", "Christian"];
     this.items = [];
 
-    for(let i = 0; i < this.levels.length; i++) {
+    for(let i = 0; i < this.genres.length; i++) {
       this.items.push({
-        title: this.levels[i],
+        title: this.genres[i],
         note: '',
         // icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-        icon: 'paper-plane'
+        icon: 'musical-notes'
       });
     }
   }
 
   itemTapped(event, item) {
-    this.navCtrl.push(GenrePage, {
+    this.navCtrl.push(CustomGenrePage, {
       item: item
     });
   }
