@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+        <button menuToggle *ngIf="!selectedItem">
+        <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Results</ion-title>
+    </ion-navbar>
+    </ion-header>
+    
+    <ion-content>
+    <h1 text-center>
+        Well Done!
+    </h1>
+    <h3 text-center>
+        Your Score: <span style="color:green">93</span>
+    </h3>
+    <hr/>
+    <h3 text-center>Analysis</h3>
+    <p text-center>You missed a few chords between 00:45 and 00:51.</p>
+    <hr/>
+    <div style="text-align: center">
+          <button ion-button (click)="itemTapped($event, item)">Check Leaderboard</button>
+    </div>
+    </ion-content>

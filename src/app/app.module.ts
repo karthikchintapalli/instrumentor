@@ -15,6 +15,8 @@ import { GenrePage } from '../pages/genre/genre';
 import { CustomGenrePage } from '../pages/customgenre/customgenre';
 import { SheetMusicPage } from '../pages/sheetmusic/sheetmusic';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import { ResultsPage } from '../pages/results/results';
+import { LeaderBoardTable } from '../pages/leaderboardtable/leaderboardtable';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
     LeaderBoard,
     GenrePage,
     CustomGenrePage,
-    SheetMusicPage
+    SheetMusicPage,
+    ResultsPage,
+    LeaderBoardTable
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,9 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
     LeaderBoard,
     GenrePage,
     CustomGenrePage,
-    SheetMusicPage
+    SheetMusicPage,
+    ResultsPage,
+    LeaderBoardTable
   ],
   providers: [
     StatusBar,

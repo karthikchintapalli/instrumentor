@@ -11,7 +11,16 @@
         <h3 text-center>
             Sheet Music
         </h3>
-        <ion-content style='text-align: center' padding>    
+        <hr/>
+        <div style="text-align: center">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/uc-V0Fm-HU8" frameborder="0" allowfullscreen></iframe>
-        </ion-content>
+        </div>
+        <hr/>
+        <div style="text-align: center">
+            <div style="display: inline-block">
+                <ion-input style="text-align: center" type="file" placeholder="Upload File"></ion-input>
+            </div>
+            <br/>
+              <button ion-button (click)="itemTapped($event, item)">Upload Attempt</button>
+        </div>
         </ion-content>

@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 
 import { NavController, NavParams } from 'ionic-angular';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
-import { ResultsPage } from '../results/results';
+import { LeaderBoard } from '../leaderboard/leaderboard';
+import { LeaderBoardTable } from '../leaderboardtable/leaderboardtable';
 
 @Component({
   selector: 'page-item-details',
-  templateUrl: 'sheetmusic.html'
+  templateUrl: 'results.html'
 })
-export class SheetMusicPage {
+export class ResultsPage {
   selectedItem: any;
   genres: string[];
   items: Array<{title: string, note: string, icon: string}>;
@@ -32,7 +33,7 @@ export class SheetMusicPage {
   
 
   itemTapped(event, item) {
-    this.navCtrl.push(ResultsPage, {
+    this.navCtrl.push(LeaderBoardTable, {
       item: item
     });
   }
